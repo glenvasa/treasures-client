@@ -3,7 +3,8 @@ export default (posts = [], action) => {
     case "FETCH_ALL":
       return action.payload;
     case "CREATE":
-      return posts;
+      // returns all existing posts plus the new post from the payload
+      return [ ...posts, action.payload];
     default:
       return posts;
   }
