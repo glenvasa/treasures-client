@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import {useDispatch} from 'react-redux'
+import { useDispatch } from "react-redux";
 import { TextField, Button, Typography, Paper } from "@material-ui/core";
 import FileBase from "react-file-base64";
 
-import {createPost } from "../../actions/posts"
+import { createPost } from "../../actions/posts";
 
 import useStyles from "./styles";
 
@@ -18,12 +18,12 @@ const Form = () => {
 
   const classes = useStyles();
 
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
-    dispatch(createPost(postData))
+    dispatch(createPost(postData));
   };
 
   const clear = () => {};
@@ -37,7 +37,7 @@ const Form = () => {
         className={`${classes.root} ${classes.form}`}
         onSubmit={handleSubmit}
       >
-        <Typography variant="h6">Sharing a Treasure</Typography>
+        <Typography variant="h6">Share a Treasure</Typography>
         <TextField
           name="creator"
           variant="outlined"
